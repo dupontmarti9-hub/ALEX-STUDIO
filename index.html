@@ -8,8 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F7F7F5;--ink:#111;--mute:#666;--w:#fff;--line:#E5E5E2;--acc:#C8FF00;--max:1160px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+<style>:root{--bg:#F7F7F5;--ink:#111;--mute:#666;--w:#fff;--line:#E5E5E2;--acc:#C8FF00;--max:1160px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -20,12 +19,14 @@ h1,h2,h3{margin:0;letter-spacing:-.035em;line-height:1.02;font-weight:800}
 h1{font-size:clamp(40px,7.4vw,92px)}
 h2{font-size:clamp(32px,5vw,60px);max-width:14em}
 h3{font-size:22px;letter-spacing:-.02em;line-height:1.2}
-p{margin:0}.mute{color:var(--mute)}
+p{margin:0}
+.mute{color:var(--mute)}
 .lead{font-size:clamp(18px,2vw,21px);color:var(--mute);max-width:32em}
 .btn{display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s,box-shadow .2s}
 .btn.p{background:var(--ink);color:var(--w)}
 .btn.p:hover{background:var(--acc);color:var(--ink);transform:translateY(-2px)}
-.btn.s{background:transparent}.btn.s:hover{background:var(--ink);color:var(--w)}
+.btn.s{background:transparent}
+.btn.s:hover{background:var(--ink);color:var(--w)}
 .btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--acc)}
 /* nav */
 nav{position:sticky;top:0;z-index:10;background:rgba(247,247,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
@@ -33,43 +34,18 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo{font-weight:800;letter-spacing:.02em;text-decoration:none;font-size:15px}
 .logo i{display:inline-block;width:9px;height:9px;background:var(--acc);border:1.5px solid var(--ink);border-radius:50%;margin-left:6px}
 nav ul{display:none;gap:28px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:500}
-nav ul a{text-decoration:none;color:var(--mute)}nav ul a:hover{color:var(--ink)}
+nav ul a{text-decoration:none;color:var(--mute)}
+nav ul a:hover{color:var(--ink)}
 nav .btn{min-height:40px;padding:0 16px;font-size:14px}
 /* hero */
 .hero{padding:56px 0 40px}
 .hero .lead{margin:24px 0 32px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
-.stage{margin-top:56px;position:relative}
-.stage::before{content:"";position:absolute;left:-12px;bottom:-14px;width:58%;height:70%;background:var(--acc);border-radius:20px;z-index:0}
-/* mockups */
-.bw{position:relative;z-index:1;background:var(--w);border:1px solid var(--ink);border-radius:14px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(0,0,0,.35)}
-.bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:#fafaf8}
-.bar b{width:9px;height:9px;border-radius:50%;background:var(--line)}
-.scr{aspect-ratio:16/10;padding:6%;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
-.mk-nav{display:flex;justify-content:space-between;font-size:clamp(7px,1.3vw,12px);font-weight:600}
-.mk-h{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(18px,4.4vw,52px)}
-.mk-row{display:flex;gap:8px;align-items:center}
-.mk-pill{padding:.5em 1.2em;border-radius:99px;background:var(--ink);color:#fff;font-size:clamp(7px,1.2vw,12px);font-weight:600}
-.mk-img{flex:1;border-radius:8px;min-height:26%}
-.t1{background:#1c2b24;color:#f2efe6}.t1 .mk-img{background:linear-gradient(135deg,#cdbb8f,#8a7a52)}
-.t2{background:#efe6dc;color:#2a1d17}.t2 .mk-img{background:#c7502f}.t2 .mk-pill{background:#2a1d17}
-.t3{background:#e8ecf4;color:#101830}.t3 .mk-img{background:#101830}.t3 .mk-pill{background:#101830}
-.t1 .mk-pill{background:#cdbb8f;color:#1c2b24}
 /* trust */
 .trust{display:grid;gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
 .trust div{padding:20px 0;border-bottom:1px solid var(--line);font-weight:600;display:flex;align-items:center;gap:12px}
-.trust div:last-child{border:0}.trust span{width:12px;height:12px;background:var(--acc);border:1.5px solid var(--ink);border-radius:50%}
-/* ba */
-.ba{display:grid;gap:20px;margin-top:48px}
-.pane{border-radius:18px;padding:20px;border:1px solid var(--line);background:var(--w)}
-.pane.after{border-color:var(--ink);box-shadow:8px 8px 0 var(--acc)}
-.pane h3{display:flex;justify-content:space-between;margin-bottom:16px}
-.pane h3 em{font-style:normal;font-size:13px;font-weight:600;color:var(--mute)}
-.old{aspect-ratio:16/10;border:1px solid #bbb;background:#e9e9e4;padding:10px;font:12px Georgia,serif;color:#555;overflow:hidden}
-.old b{display:block;background:#8c8c8c;color:#fff;padding:3px 6px;margin-bottom:6px;font-family:Arial,sans-serif;font-size:11px}
-.old u{display:block;margin:3px 0;color:#2b4a9a}.old s{display:inline-block;width:30%;height:34px;background:#ccc;margin:4px 4px 0 0;text-decoration:none}
-.pane ul{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:6px;font-weight:500}
-.pane li::before{content:"–  ";color:var(--mute)}.after li::before{content:"+  ";font-weight:800}
+.trust div:last-child{border:0}
+.trust span{width:12px;height:12px;background:var(--acc);border:1.5px solid var(--ink);border-radius:50%}
 /* benefits */
 .grid4{display:grid;gap:16px;margin-top:48px}
 .card{background:var(--w);border:1px solid var(--line);border-radius:18px;padding:28px}
@@ -78,17 +54,16 @@ nav .btn{min-height:40px;padding:0 16px;font-size:14px}
 /* services */
 .svc{display:grid;gap:20px;margin-top:48px}
 .sv{border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:20px;border:1px solid var(--ink);min-height:480px}
-.sv.web{background:var(--w)}.sv.soc{background:var(--ink);color:var(--w);border-color:var(--ink)}
-.sv p{color:var(--mute)}.sv.soc p{color:#b9b9b4}
-.price{font-weight:800;font-size:34px;letter-spacing:-.03em}.price small{font-size:14px;font-weight:500;color:var(--mute);letter-spacing:0}
-.soc .price small{color:#b9b9b4}.sv .btn{margin-top:auto;align-self:flex-start}.soc .btn{background:var(--acc);color:var(--ink);border-color:var(--acc)}.soc .btn:hover{background:#fff;border-color:#fff}
-.ph{display:flex;gap:10px;flex:1;min-height:150px}.ph i{flex:1;border-radius:14px}
-.ig{aspect-ratio:1;border-radius:12px;padding:10px;font-weight:800;font-size:15px;line-height:1;letter-spacing:-.03em;display:flex;align-items:flex-end}
-/* work */
-.work{display:grid;gap:20px;margin-top:48px}
-.proj .bw{box-shadow:none}.proj p{margin-top:14px;display:flex;justify-content:space-between;font-weight:600}
-.proj span{font-size:13px;font-weight:500;color:var(--mute);border:1px solid var(--line);padding:2px 10px;border-radius:99px;background:var(--w)}
-.proj .bw{transition:transform .3s}.proj:hover .bw{transform:translateY(-4px)}
+.sv.web{background:var(--w)}
+.sv.social{background:var(--ink);color:var(--w);border-color:var(--ink)}
+.sv p{color:var(--mute)}
+.sv.social p{color:#b9b9b4}
+.price{font-weight:800;font-size:34px;letter-spacing:-.03em}
+.price small{font-size:14px;font-weight:500;color:var(--mute);letter-spacing:0}
+.social .price small{color:#b9b9b4}
+.sv .btn{margin-top:auto;align-self:flex-start}
+.social .btn{background:var(--acc);color:var(--ink);border-color:var(--acc)}
+.social .btn:hover{background:#fff;border-color:#fff}
 /* process */
 .steps{display:grid;gap:0;margin-top:48px;border-top:1px solid var(--ink)}
 .step{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:4px 12px}
@@ -110,106 +85,90 @@ details p{margin-top:12px;color:var(--mute);max-width:40em}
 .final .btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
 footer{background:var(--ink);color:#b9b9b4;padding:0 0 32px;font-size:15px;padding-bottom:calc(32px + env(safe-area-inset-bottom,0px))}
 footer .wrap{border-top:1px solid #333;padding-top:28px;display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
-footer strong{color:#fff}footer a{text-decoration:none}footer a:hover{color:var(--acc)}
-.rv{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
-@media(min-width:760px){
- .wrap{padding:0 40px}section{padding:120px 0}
- nav ul{display:flex}
- .trust{grid-template-columns:repeat(3,1fr)}.trust div{border:0;border-right:1px solid var(--line);padding:24px 28px}.trust div:first-child{padding-left:0}
- .ba,.svc{grid-template-columns:1fr 1fr}.grid4{grid-template-columns:repeat(2,1fr)}
- .work{grid-template-columns:repeat(6,1fr)}.work .proj:nth-child(1){grid-column:span 4}.work .proj:nth-child(2){grid-column:span 2}.work .proj:nth-child(3){grid-column:span 3}.work .proj:nth-child(4){grid-column:span 3}
- .steps{grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}.step{display:block;border:0;border-right:1px solid var(--line);padding:28px 24px 0 0;margin-right:24px}.step:last-child{border:0}.step b{display:block;margin-bottom:56px}
-}
+footer strong{color:#fff}
+footer a{text-decoration:none}
+footer a:hover{color:var(--acc)}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(min-width:760px){.wrap{padding:0 40px}
+section{padding:120px 0}
+nav ul{display:flex}
+.trust{grid-template-columns:repeat(3,1fr)}
+.trust div{border:0;border-right:1px solid var(--line);padding:24px 28px}
+.trust div:first-child{padding-left:0}
+.svc{grid-template-columns:1fr 1fr}
+.grid4{grid-template-columns:repeat(2,1fr)}
+.steps{grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.step{display:block;border:0;border-right:1px solid var(--line);padding:28px 24px 0 0;margin-right:24px}
+.step:last-child{border:0}
+.step b{display:block;margin-bottom:56px}}
 @media(min-width:1000px){.grid4{grid-template-columns:repeat(4,1fr)}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
-
-.bw{container-type:inline-size}
-.m{font-size:max(8.5px,2.1cqw);line-height:1.3}
-.m *{box-sizing:border-box}
-.mn{display:flex;align-items:center;justify-content:space-between;gap:1em;padding:1.3em 2.4em;border-bottom:1px solid rgba(127,127,127,.25)}
-.mn>b{font-size:1.35em;font-weight:800;letter-spacing:-.02em}
-.ml{display:flex;gap:1.8em;font-weight:500;opacity:.8}
-.mb{display:inline-block;padding:.75em 1.5em;border-radius:99px;font-weight:600;white-space:nowrap}
-.mb.o{background:transparent!important;color:inherit!important;border:1px solid currentColor}
-.mh{display:grid;grid-template-columns:1.15fr .85fr;gap:2em;align-items:center;padding:2.8em 2.4em}
-.mh h4{margin:0 0 .45em;font-size:4.8em;line-height:.94;letter-spacing:-.045em;font-weight:800}
-.mh p{margin:0 0 1.4em;font-size:1.2em;line-height:1.45;opacity:.8;max-width:26em}
-.vis{display:flex;justify-content:center;align-items:center}
-.ms{padding:0 2.4em 2.4em}
-.ms>h5{margin:0 0 1em;font-size:1.5em;letter-spacing:-.02em;font-weight:800;display:flex;justify-content:space-between;align-items:baseline;gap:1em;flex-wrap:wrap}
-.ms>h5 small{font-size:.7em;font-weight:500;opacity:.7}
-.mg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2em}
-.mc{border-radius:1em;padding:1.1em;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
-.mc strong{display:block;font-size:1.15em;line-height:1.2;margin:.6em 0 .25em}.mc span{font-weight:500;opacity:.85}
-.mf{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6em 2em;padding:1.3em 2.4em;border-top:1px solid rgba(127,127,127,.25);font-size:.95em;opacity:.8}
-.m.v{background:#1c2b24;color:#f2efe6}.m.v .mb{background:#cdbb8f;color:#1c2b24}
-.m.l{background:#f1e9df;color:#2a1d17}.m.l .mb{background:#2a1d17;color:#f6efe6}.m.l .mc{background:#fff;border-color:#e3d7c8}
-.m.c{background:#f1f3f8;color:#101830}.m.c .mb{background:#101830;color:#fff}.m.c .mc{background:#fff;border-color:#d9deea}
-.pl{position:relative;width:100%;aspect-ratio:1;border-radius:50%;background:#f2efe6;box-shadow:0 .5em 1.2em rgba(0,0,0,.3)}
-.pl::before{content:"";position:absolute;inset:14%;border-radius:var(--r,50%);background:var(--f)}
-.pl::after{content:"";position:absolute;inset:32%;border-radius:var(--r,50%);background:var(--g)}
-.pl.big{max-width:19em}.pl.big::before{inset:12%}
-.lf{position:absolute;z-index:2;width:22%;height:9%;background:#6f8f4a;border-radius:100% 0;transform:rotate(-20deg)}
-.tm{position:absolute;z-index:2;width:7%;aspect-ratio:1;border-radius:50%;background:#c2412d}
-.moonbg{position:relative;width:100%;max-width:19em;aspect-ratio:1;border-radius:50%;background:#e4d3bd;display:flex;align-items:flex-end;justify-content:center;padding-bottom:20%}
-.vase{position:relative;flex:none;width:6em;height:7.5em;margin-top:2.6em;background-color:var(--c);background-image:linear-gradient(transparent 38%,rgba(255,255,255,.35) 38% 44%,transparent 44%);border-radius:50% 50% 14% 14%/60% 60% 8% 8%}
-.vase::before{content:"";position:absolute;left:30%;right:30%;top:-2.2em;height:2.6em;background:var(--c);border-radius:.8em .8em 0 0}
-.cup{position:relative;flex:none;width:5em;height:4.2em;background:var(--c);border-radius:.6em .6em 2.4em 2.4em;box-shadow:inset 0 -.5em 0 rgba(0,0,0,.08)}
-.cup::after{content:"";position:absolute;right:-1.8em;top:.7em;width:2.2em;height:2em;border:.55em solid var(--c);border-left:0;border-radius:0 50% 50% 0}
-.bowl{flex:none;width:7em;height:3.4em;background:var(--c);border-radius:.4em .4em 3.5em 3.5em;box-shadow:inset 0 .5em 0 rgba(0,0,0,.1)}
-.moonbg .vase{margin-top:0;transform:scale(1.35);transform-origin:bottom}.moonbg .cup{transform:scale(1.2);transform-origin:bottom}.moonbg .bowl{transform:scale(1.1);transform-origin:bottom}
-.pv{height:8.5em;border-radius:.7em;background:#f4ece2;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.4em;overflow:hidden}
-.db{background:#fff;border:1px solid #d9deea;border-radius:1em;padding:1.4em}.db b{font-size:1.2em}
-.bars{display:flex;align-items:flex-end;gap:.7em;height:9em;margin:1em 0 .8em}.bars i{flex:1;background:#101830;border-radius:.3em .3em 0 0;opacity:.18}.bars i:last-child{opacity:1}
-.db small{opacity:.7}.m.c .mc b{font-size:1.3em;letter-spacing:-.02em}
-.m.ig{background:#fff;color:#111}.pf{display:flex;align-items:center;gap:.8em;padding:1.3em 2.4em;border-bottom:1px solid #eee;font-weight:600}.pf small{margin-left:auto;font-weight:500;color:#666}
-.av{width:2.6em;height:2.6em;border-radius:50%;background:#b8573a}
-.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1em;padding:1.4em 2.4em 2.4em}
-.ip{aspect-ratio:1;border-radius:.8em;position:relative;overflow:hidden;container-type:inline-size}
-.pi{position:absolute;inset:0;padding:8cqw;font-size:max(9px,6cqw);display:flex;flex-direction:column;justify-content:space-between;line-height:1.25}
-.pi small{font-weight:600;position:relative;z-index:1}.pi h6{margin:0;font-size:2.4em;line-height:.95;letter-spacing:-.04em;font-weight:800}.pi p{margin:.5em 0 0;font-size:.95em;line-height:1.3;opacity:.85}
-.moon{position:absolute;right:-12%;top:-12%;width:60%;aspect-ratio:1;border-radius:50%;background:#f3d9c3}.moon::after{content:"";position:absolute;inset:0;left:24%;border-radius:50%;background:var(--bg)}
-.tag{align-self:flex-start;background:var(--acc);color:#111;font-size:.8em;font-weight:600;padding:.35em .9em;border-radius:99px}
-.pi .vase{font-size:.9em}
-.ph.web{display:block;flex:1;min-height:150px;border-radius:14px;overflow:hidden}.ph.web .bw{max-height:240px;overflow:hidden;border-radius:14px}
-.ph.soc{display:block}.ph.soc .pg{padding:0}
-.proj p{align-items:baseline}.proj span{border:0;background:none;padding:0;color:var(--mute);font-size:14px}
-@container (max-width:440px){.mh{grid-template-columns:1fr;gap:1.6em}.mh h4{font-size:3.8em}.ml{display:none}.vis .pl.big,.moonbg{max-width:70%}.mf{flex-direction:column}.m .pg{grid-template-columns:1fr}.ms>h5{display:block}.ms>h5 small{display:block;margin-top:.3em}}
-@media(max-width:600px){.ph.soc .ip:nth-child(3){display:none}.ph.soc .pg{grid-template-columns:1fr 1fr}}
-@media(min-width:760px){.work .proj:nth-child(n){grid-column:span 3}}
-
-.stack{display:grid;gap:20px;align-content:start}
-.fig{margin:0}.fig .im{display:block;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--w)}
-.fig img{display:block;width:100%;height:auto;transition:transform .6s ease}.fig:hover img{transform:scale(1.03)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}
+.rv{opacity:1;transform:none}}
+.fig{margin:0}
+.fig .im{display:block;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--w)}
+.fig img{display:block;width:100%;height:auto;transition:transform .6s ease}
+.fig:hover img{transform:scale(1.03)}
 .fig figcaption{margin-top:12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .fig figcaption span{font-size:14px;font-weight:500;color:var(--mute)}
-.soc{margin-top:72px}.soc h3{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em}.soc>p{margin:6px 0 28px}
+.soc{margin-top:72px}
+.soc h3{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em}
+.soc>p{margin:6px 0 28px}
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
-@media(min-width:900px){.sg{grid-template-columns:1fr 1fr 1fr;gap:24px}.sg .fig:nth-child(1){grid-column:1;grid-row:1}.sg .fig:nth-child(2){grid-column:1;grid-row:2}.sg .fig:nth-child(3){grid-column:2;grid-row:1/span 2}.sg .fig:nth-child(4){grid-column:3;grid-row:1/span 2}}
-
-.wsx{margin-top:56px}.wsx>h3{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}
-.vp{overflow:hidden;touch-action:pan-y}.trk{display:flex;transition:transform .55s cubic-bezier(.2,.7,.2,1);will-change:transform}.sld{flex:0 0 100%;min-width:0}
+@media(min-width:900px){.sg{grid-template-columns:1fr 1fr 1fr;gap:24px}
+.sg .fig:nth-child(1){grid-column:1;grid-row:1}
+.sg .fig:nth-child(2){grid-column:1;grid-row:2}
+.sg .fig:nth-child(3){grid-column:2;grid-row:1/span 2}
+.sg .fig:nth-child(4){grid-column:3;grid-row:1/span 2}}
+.wsx{margin-top:56px}
+.wsx>h3{font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}
+.vp{overflow:hidden;touch-action:pan-y}
+.trk{display:flex;transition:transform .55s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.sld{flex:0 0 100%;min-width:0}
 .pwf{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--w);box-shadow:0 1px 2px rgba(17,17,17,.04),0 18px 40px -26px rgba(17,17,17,.22)}
 .pvb{display:flex;align-items:center;gap:14px;height:38px;padding:0 14px;border-bottom:1px solid var(--line);background:#fbfbf9}
-.pvd{display:flex;gap:6px}.pvd i{width:8px;height:8px;border-radius:50%;background:#dcdcd7}
+.pvd{display:flex;gap:6px}
+.pvd i{width:8px;height:8px;border-radius:50%;background:#dcdcd7}
 .pvu{flex:1;text-align:center;font-size:12px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pvx{font-size:13px;color:var(--mute);text-decoration:none;padding:4px 8px;border-radius:6px;transition:color .2s}.pvx:hover{color:var(--ink)}
+.pvx{font-size:13px;color:var(--mute);text-decoration:none;padding:4px 8px;border-radius:6px;transition:color .2s}
+.pvx:hover{color:var(--ink)}
 .pvm{position:relative;height:520px;background:var(--bg);overflow:hidden}
 @media(min-width:640px){.pvm{height:auto;aspect-ratio:16/10}}
-.pvf{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:8px;color:var(--mute);font-size:14px}.pvf b{font-size:clamp(28px,5vw,56px);letter-spacing:-.04em;color:var(--ink);font-weight:800}
-.pvm iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;background:transparent;pointer-events:none;max-width:none}.pvm.live iframe{pointer-events:auto}
-.pvo{position:absolute;inset:0;z-index:2;cursor:pointer}.pvm.live .pvo{display:none}
-.pvh{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:3;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:8px 14px;border-radius:99px;opacity:0;transition:opacity .25s;pointer-events:none}.pvm:hover .pvh{opacity:.92}.pvm.live .pvh{display:none}
+.pvf{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:8px;color:var(--mute);font-size:14px}
+.pvf b{font-size:clamp(28px,5vw,56px);letter-spacing:-.04em;color:var(--ink);font-weight:800}
+.pvm iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;background:transparent;pointer-events:none;max-width:none}
+.pvm.live iframe{pointer-events:auto}
+.pvo{position:absolute;inset:0;z-index:2;cursor:pointer}
+.pvm.live .pvo{display:none}
+.pvh{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:3;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:8px 14px;border-radius:99px;opacity:0;transition:opacity .25s;pointer-events:none}
+.pvm:hover .pvh{opacity:.92}
+.pvm.live .pvh{display:none}
 @media(pointer:coarse){.pvh{display:none}}
 .wbar{display:flex;align-items:center;gap:14px;margin-top:28px}
-.wbtn{width:52px;height:52px;flex:none;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font:500 20px/1 Inter,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s}.wbtn:hover{background:var(--acc);transform:translateY(-2px)}.wbtn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--acc)}
-.wcnt{margin-left:10px;font-size:15px;white-space:nowrap;font-variant-numeric:tabular-nums}.wcnt b{font-weight:600}.wcnt span{color:var(--mute)}
-.wprog{flex:1;height:2px;background:var(--line);position:relative;margin-left:10px}.wprog i{position:absolute;left:0;top:0;bottom:0;width:33.33%;background:var(--ink);transition:width .55s cubic-bezier(.2,.7,.2,1)}.wprog i::after{content:"";position:absolute;right:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--acc);border:1.5px solid var(--ink)}
-.wi{display:grid;margin-top:28px}.wp{grid-area:1/1;display:grid;gap:20px;align-items:end;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .35s,transform .35s,visibility .35s}.wp.on{opacity:1;visibility:visible;transform:none}
+.wbtn{width:52px;height:52px;flex:none;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font:500 20px/1 Inter,system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s}
+.wbtn:hover{background:var(--acc);transform:translateY(-2px)}
+.wbtn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--acc)}
+.wcnt{margin-left:10px;font-size:15px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.wcnt b{font-weight:600}
+.wcnt span{color:var(--mute)}
+.wprog{flex:1;height:2px;background:var(--line);position:relative;margin-left:10px}
+.wprog i{position:absolute;left:0;top:0;bottom:0;width:33.33%;background:var(--ink);transition:width .55s cubic-bezier(.2,.7,.2,1)}
+.wprog i::after{content:"";position:absolute;right:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--acc);border:1.5px solid var(--ink)}
+.wi{display:grid;margin-top:28px}
+.wp{grid-area:1/1;display:grid;gap:20px;align-items:end;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .35s,transform .35s,visibility .35s}
+.wp.on{opacity:1;visibility:visible;transform:none}
 @media(min-width:760px){.wp{grid-template-columns:1fr auto}}
-.wp h4{margin:0;font-size:clamp(38px,8.4vw,112px);font-weight:800;letter-spacing:-.045em;line-height:.95}.wp p{margin:14px 0 0;color:var(--mute);font-size:clamp(16px,1.8vw,20px)}.wp .btn{justify-self:start;font-size:14px;letter-spacing:.04em}
-.work .stack{grid-template-columns:1fr}
-@media(min-width:760px){.work .proj.stack:nth-child(n){grid-column:1/-1;grid-template-columns:1fr 1fr;align-items:start}}
+.wp h4{margin:0;font-size:clamp(38px,8.4vw,112px);font-weight:800;letter-spacing:-.045em;line-height:.95}
+.wp p{margin:14px 0 0;color:var(--mute);font-size:clamp(16px,1.8vw,20px)}
+.wp .btn{justify-self:start;font-size:14px;letter-spacing:.04em}
+
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin:0 0 32px}
+.eyebrow i{width:9px;height:9px;border-radius:50%;background:var(--acc);border:1.5px solid var(--ink)}
+.hero{padding:clamp(64px,11vw,150px) 0 clamp(48px,7vw,88px)}.hero h1{font-size:clamp(40px,8.2vw,116px);max-width:12em}
+.promise{padding:clamp(72px,10vw,150px) 0 48px}.promise h2{font-size:clamp(34px,6.4vw,92px);max-width:12em;text-transform:uppercase;letter-spacing:-.045em;line-height:.98}.promise .lead{margin-top:32px}
+.sv{min-height:0;padding:clamp(28px,3.4vw,44px);gap:22px}.sv .lbl{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}.sv.social .lbl{color:#b9b9b4}
+.sv .big{font-size:clamp(30px,3.8vw,52px);letter-spacing:-.04em;line-height:1.02;font-weight:800}.sv p{font-size:18px;max-width:26em}.sv .price{margin-top:auto;padding-top:24px}
+.sb{display:grid;gap:20px;margin-top:24px;align-items:start}@media(min-width:760px){.sb{grid-template-columns:1fr 1fr}.sv{min-height:420px}}
 </style>
 </head>
 <body>
@@ -219,37 +178,18 @@ footer strong{color:#fff}footer a{text-decoration:none}footer a:hover{color:var(
 
 <main id="top">
 <header class="hero"><div class="wrap">
+<p class="eyebrow"><i></i>ALEX STUDIO — Websites &amp; Social Media</p>
 <h1>Votre entreprise mérite mieux qu'une présence en ligne moyenne.</h1>
 <p class="lead">Sites web &amp; contenus digitaux conçus pour vous faire paraître aussi professionnel que vous l'êtes.</p>
 <div class="cta"><a class="btn p" href="#contact">Parler de mon projet →</a><a class="btn s" href="#realisations">Voir les réalisations</a></div>
-<div class="stage"><div class="bw" role="img" aria-label="Aperçu d'un site vitrine, projet conceptuel">
-<div class="bar"><b></b><b></b><b></b></div>
-<div class="m v"><div class="mn"><b>Maison Verdan</b><div class="ml"><span>Menu</span><span>À propos</span><span>Contact</span></div><span class="mb">Réserver</span></div>
-<div class="mh"><div><h4>Cuisine de saison.</h4><p>Une cuisine simple, locale et généreuse, pensée autour des produits du moment.</p><span class="mb">Réserver une table</span></div>
-<div class="vis"><div class="pl big" style="--f:#d98a2b;--g:radial-gradient(#f4e3b8,#e9c36f)"><i class="lf" style="left:10%;top:18%"></i><i class="lf" style="right:12%;top:30%;transform:rotate(70deg)"></i><i class="lf" style="left:30%;bottom:14%;transform:rotate(-40deg)"></i><i class="tm" style="right:26%;bottom:20%"></i><i class="tm" style="left:22%;top:44%;width:5%"></i></div></div></div>
-<div class="ms"><h5>Notre carte <small>Menu du jour</small></h5><div class="mg">
-<div class="mc"><div class="pl" style="--f:#d98a2b;--g:radial-gradient(#f4e3b8,#e9c36f);--r:50%"></div><strong>Velouté de courge</strong><span>Entrée — 12 €</span></div>
-<div class="mc"><div class="pl" style="--f:#e8dcc0;--g:radial-gradient(#fff 0 30%,#e9b98f 31%);--r:46% 54% 50% 50%"></div><strong>Cabillaud, beurre blanc</strong><span>Plat — 24 €</span></div>
-<div class="mc"><div class="pl" style="--f:#a8683a;--g:radial-gradient(#e9d3a0,#c99a55);--r:50%"></div><strong>Tarte fine aux poires</strong><span>Dessert — 9 €</span></div></div></div>
-<div class="mf"><span>Mardi – dimanche · 12h–14h30 / 19h–22h</span><span>12 rue des Halles</span></div></div></div></div>
 </div></header>
 
 <div class="wrap"><div class="trust"><div><span></span>Design personnalisé</div><div><span></span>Pensé pour mobile</div><div><span></span>Livraison rapide</div></div></div>
 
-<section><div class="wrap">
-<h2 class="rv">Votre activité a évolué. Votre présence en ligne aussi.</h2>
-<div class="ba">
-<div class="pane rv"><h3>Avant <em>Aujourd'hui</em></h3>
-<div class="old" aria-hidden="true"><b>Accueil | Produits | Infos | Contact | Liens | Anciennes news</b><u>Bienvenue sur notre site officiel !!</u>Texte long, police différente, photos de tailles variées…<br><s></s><s></s><s></s></div>
-<ul><li>Site vieillissant</li><li>Informations dispersées</li><li>Image peu cohérente</li></ul></div>
-<div class="pane after rv"><h3>Après <em>Avec ALEX STUDIO</em></h3>
-<div class="bw" style="box-shadow:none"><div class="m l"><div class="mn"><b>Atelier Lune</b><div class="ml"><span>Collection</span><span>Atelier</span><span>Contact</span></div><span class="mb">Panier (0)</span></div>
-<div class="mh"><div><h4>Céramique faite main.</h4><p>Des pièces uniques façonnées à la main dans notre atelier.</p><span class="mb">Découvrir la collection</span></div>
-<div class="vis"><div class="moonbg"><div class="vase" style="--c:#b8573a"></div><div class="cup" style="--c:#f6efe6;margin-left:-.6em"></div><div class="bowl" style="--c:#9aa58a;margin-left:-1em"></div></div></div></div>
-<div class="ms"><h5>La collection <small>Pièces uniques</small></h5><div class="mg"><div class="mc"><div class="pv"><div class="cup" style="--c:#e8d9c6"></div></div><strong>Tasse Alba</strong><span>28 €</span></div><div class="mc"><div class="pv"><div class="vase" style="--c:#b8573a"></div></div><strong>Vase Sora</strong><span>64 €</span></div><div class="mc"><div class="pv"><div class="bowl" style="--c:#9aa58a"></div></div><strong>Bol Luna</strong><span>36 €</span></div></div></div>
-<div class="mf"><span>Livraison soignée en France</span><span>Pièces numérotées</span></div></div></div>
-<ul><li>Design moderne</li><li>Parcours clair</li><li>Image professionnelle</li></ul></div>
-</div></div></section>
+<section class="promise"><div class="wrap">
+<h2 class="rv">Une bonne présence change la perception de votre activité.</h2>
+<p class="lead rv">Avant même de vous parler, vos clients vous jugent en ligne. ALEX STUDIO soigne ce premier regard, du site aux réseaux sociaux.</p>
+</div></section>
 
 <section style="padding-top:0"><div class="wrap">
 <h2 class="rv">Ce que votre nouvelle présence change.</h2>
@@ -263,25 +203,13 @@ footer strong{color:#fff}footer a{text-decoration:none}footer a:hover{color:var(
 <section id="services" style="padding-top:0"><div class="wrap">
 <h2 class="rv">Deux façons de mieux vous montrer.</h2>
 <div class="svc">
-<article class="sv web rv"><div class="ph web"><div class="bw"><div class="m c"><div class="mn"><b>Cabinet Morel</b><div class="ml"><span>Expertises</span><span>Cabinet</span><span>Contact</span></div><span class="mb">Prendre rendez-vous</span></div>
-<div class="mh"><div><h4>Votre gestion, simplifiée.</h4><p>Conseil stratégique et accompagnement pour les dirigeants qui veulent avancer avec clarté.</p><span class="mb">Prendre rendez-vous</span> <span class="mb o">Le cabinet</span></div>
-<div class="vis" style="display:block"><div class="db"><b>Pilotage trimestriel</b><div class="bars"><i style="height:35%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:70%"></i><i style="height:100%"></i></div><small>Tableau de bord clair, décisions rapides</small></div></div></div>
-<div class="ms"><h5>Nos expertises <small>Réponse sous 24 h · 1er échange offert</small></h5><div class="mg">
-<div class="mc"><b>01</b><strong>Conseil stratégique</strong><span>Une vision claire de vos priorités.</span></div>
-<div class="mc"><b>02</b><strong>Accompagnement</strong><span>À vos côtés dans chaque décision.</span></div>
-<div class="mc"><b>03</b><strong>Pilotage</strong><span>Des indicateurs simples à suivre.</span></div></div></div></div></div></div>
-<h3>Websites</h3><p style="color:var(--ink);font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.2">Des sites qui donnent envie de vous contacter.</p>
-<p>Sites vitrines, landing pages et refontes, pensés pour mobile.</p>
-<div class="price"><small>À partir de </small>299 €</div><a class="btn p" href="#contact">Découvrir →</a></article>
-<article class="sv soc rv"><div class="ph soc"><div class="pg"><div class="ip" style="background:#b8573a;color:#f6efe6;--bg:#b8573a"><div class="pi"><i class="moon"></i><small>Atelier Lune</small><div><h6>Nouvelle<br>collection</h6><p>12 pièces uniques, façonnées à la main.</p></div></div></div><div class="ip" style="background:#f6efe6;color:#2a1d17"><div class="pi"><small>Atelier Lune</small><div><h6>Ouvert<br>samedi</h6><p>10h – 18h, à l'atelier.</p></div><div class="vase" style="--c:#b8573a;position:absolute;right:9%;bottom:0"></div></div></div><div class="ip" style="background:#9aa58a;color:#1d2418"><div class="pi"><small>Atelier Lune</small><div><h6 style="font-size:4.4em">−20 %</h6><p>Sur la collection d'automne.</p></div><span class="tag">Jusqu'à dimanche</span></div></div></div></div>
-<h3>Social Media</h3><p style="color:var(--w);font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.2">Une image Instagram à la hauteur de votre activité.</p>
-<p>Posts, stories et carrousels visuels dans une identité cohérente.</p>
-<div class="price"><small>À partir de </small>49 €</div><a class="btn" href="#contact">Découvrir →</a></article>
+<article class="sv web rv"><small class="lbl">01 — Websites</small><h3 class="big">Des sites qui donnent envie de vous contacter.</h3><p>Sites vitrines, landing pages et refontes, pensés pour votre activité et le mobile.</p><div class="price"><small>À partir de </small>299 €</div><a class="btn p" href="#websites">Voir les réalisations →</a></article>
+<article class="sv social rv"><small class="lbl">02 — Social Media</small><h3 class="big">Une image Instagram à la hauteur de votre activité.</h3><p>Posts, stories et carrousels visuels dans une identité cohérente.</p><div class="price"><small>À partir de </small>49 €</div><a class="btn" href="#social-media">Voir les réalisations →</a></article>
 </div></div></section>
 
 <section id="realisations" style="padding-top:0"><div class="wrap">
 <h2 class="rv">Quelques projets.</h2>
-<div class="wsx rv" data-wsx role="region" aria-roledescription="carousel" aria-label="Sélection de sites web"><h3>Selected websites.</h3><div class="vp"><div class="trk"><div class="sld" role="group" aria-roledescription="slide" aria-label="1 sur 3 : Maison Verdan"><div class="pwf"><div class="pvb"><div class="pvd"><i></i><i></i><i></i></div><div class="pvu">maisonverdan.vercel.app</div><a class="pvx" href="https://maisonverdan.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Maison Verdan dans un nouvel onglet">↗</a></div><div class="pvm"><div class="pvf"><b>Maison Verdan</b><span>Chargement de l'aperçu…</span></div><iframe data-src="https://maisonverdan.vercel.app/" title="Aperçu du site Maison Verdan" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer"></iframe><div class="pvo"></div><span class="pvh">Cliquer pour explorer</span></div></div></div><div class="sld" role="group" aria-roledescription="slide" aria-label="2 sur 3 : APEX"><div class="pwf"><div class="pvb"><div class="pvd"><i></i><i></i><i></i></div><div class="pvu">apex-three-black.vercel.app</div><a class="pvx" href="https://apex-three-black.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir APEX dans un nouvel onglet">↗</a></div><div class="pvm"><div class="pvf"><b>APEX</b><span>Chargement de l'aperçu…</span></div><iframe data-src="https://apex-three-black.vercel.app/" title="Aperçu du site APEX" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer"></iframe><div class="pvo"></div><span class="pvh">Cliquer pour explorer</span></div></div></div><div class="sld" role="group" aria-roledescription="slide" aria-label="3 sur 3 : Cabinet Morel"><div class="pwf"><div class="pvb"><div class="pvd"><i></i><i></i><i></i></div><div class="pvu">cabinetmorel.vercel.app</div><a class="pvx" href="https://cabinetmorel.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Cabinet Morel dans un nouvel onglet">↗</a></div><div class="pvm"><div class="pvf"><b>Cabinet Morel</b><span>Chargement de l'aperçu…</span></div><iframe data-src="https://cabinetmorel.vercel.app/" title="Aperçu du site Cabinet Morel" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer"></iframe><div class="pvo"></div><span class="pvh">Cliquer pour explorer</span></div></div></div></div></div><div class="wbar"><button class="wbtn" type="button" data-prev aria-label="Projet précédent">←</button><button class="wbtn" type="button" data-next aria-label="Projet suivant">→</button><div class="wcnt" aria-live="polite"><b>01</b> <span>/ 03</span></div><div class="wprog" aria-hidden="true"><i></i></div></div><div class="wi"><div class="wp on" data-i="0"><div><h4>MAISON VERDAN</h4><p>Concept web · Restaurant gastronomique</p></div><a class="btn p" href="https://maisonverdan.vercel.app/" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a></div><div class="wp" data-i="1"><div><h4>APEX</h4><p>Projet web · Productivité</p></div><a class="btn p" href="https://apex-three-black.vercel.app/" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a></div><div class="wp" data-i="2"><div><h4>CABINET MOREL</h4><p>Concept web · Conseil</p></div><a class="btn p" href="https://cabinetmorel.vercel.app/" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a></div></div></div><div class="work"><div class="proj rv stack"><figure class="fig"><div class="im"><img src="images/banniere1.jpg" width="1500" height="1080" alt="Bannière CoachMove, coach sportif, fond noir et accents orange" loading="lazy" decoding="async"></div><figcaption><b>CoachMove</b><span>Concept · Bannière</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/banniere2.jpg" width="1500" height="500" alt="Bannière Leon Visuals, photographe portrait et lifestyle, fond noir" loading="lazy" decoding="async"></div><figcaption><b>Leon Visuals</b><span>Concept · Bannière</span></figcaption></figure></div></div><div class="soc rv"><h3>Social media</h3><p class="mute">Posts, stories et bannières.</p><div class="sg"><figure class="fig"><div class="im"><img src="images/post1.jpg" width="1080" height="1080" alt="Post Instagram Maison Dorée : croissant au beurre de Normandie" loading="lazy" decoding="async"></div><figcaption><b>Maison Dorée</b><span>Concept · Post</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/post2.jpg" width="1080" height="1080" alt="Post Instagram Lunaire Studio : Anneau Solstice, nouvelle collection" loading="lazy" decoding="async"></div><figcaption><b>Lunaire Studio</b><span>Concept · Post</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/story1.jpg" width="1080" height="1920" alt="Story Lunaire Studio : Anneau Solstice disponible maintenant" loading="lazy" decoding="async"></div><figcaption><b>Lunaire Studio</b><span>Concept · Story</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/story2.jpg" width="1080" height="1920" alt="Story Maison Dorée : vente flash à -30 %" loading="lazy" decoding="async"></div><figcaption><b>Maison Dorée</b><span>Concept · Story</span></figcaption></figure></div></div></div></section>
+<div class="wsx rv" id="websites" data-wsx role="region" aria-roledescription="carousel" aria-label="Sélection de sites web"><h3>Selected websites.</h3><div class="vp"><div class="trk"><div class="sld" role="group" aria-roledescription="slide" aria-label="1 sur 3 : Maison Verdan"><div class="pwf"><div class="pvb"><div class="pvd"><i></i><i></i><i></i></div><div class="pvu">maisonverdan.vercel.app</div><a class="pvx" href="https://maisonverdan.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Maison Verdan dans un nouvel onglet">↗</a></div><div class="pvm"><div class="pvf"><b>Maison Verdan</b><span>Chargement de l'aperçu…</span></div><iframe data-src="https://maisonverdan.vercel.app/" title="Aperçu du site Maison Verdan" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer"></iframe><div class="pvo"></div><span class="pvh">Cliquer pour explorer</span></div></div></div><div class="sld" role="group" aria-roledescription="slide" aria-label="2 sur 3 : APEX"><div class="pwf"><div class="pvb"><div class="pvd"><i></i><i></i><i></i></div><div class="pvu">apex-three-black.vercel.app</div><a class="pvx" href="https://apex-three-black.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir APEX dans un nouvel onglet">↗</a></div><div class="pvm"><div class="pvf"><b>APEX</b><span>Chargement de l'aperçu…</span></div><iframe data-src="https://apex-three-black.vercel.app/" title="Aperçu du site APEX" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer"></iframe><div class="pvo"></div><span class="pvh">Cliquer pour explorer</span></div></div></div><div class="sld" role="group" aria-roledescription="slide" aria-label="3 sur 3 : Cabinet Morel"><div class="pwf"><div class="pvb"><div class="pvd"><i></i><i></i><i></i></div><div class="pvu">cabinetmorel.vercel.app</div><a class="pvx" href="https://cabinetmorel.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir Cabinet Morel dans un nouvel onglet">↗</a></div><div class="pvm"><div class="pvf"><b>Cabinet Morel</b><span>Chargement de l'aperçu…</span></div><iframe data-src="https://cabinetmorel.vercel.app/" title="Aperçu du site Cabinet Morel" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer"></iframe><div class="pvo"></div><span class="pvh">Cliquer pour explorer</span></div></div></div></div></div><div class="wbar"><button class="wbtn" type="button" data-prev aria-label="Projet précédent">←</button><button class="wbtn" type="button" data-next aria-label="Projet suivant">→</button><div class="wcnt" aria-live="polite"><b>01</b> <span>/ 03</span></div><div class="wprog" aria-hidden="true"><i></i></div></div><div class="wi"><div class="wp on" data-i="0"><div><h4>MAISON VERDAN</h4><p>Concept web · Restaurant gastronomique</p></div><a class="btn p" href="https://maisonverdan.vercel.app/" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a></div><div class="wp" data-i="1"><div><h4>APEX</h4><p>Projet web · Productivité</p></div><a class="btn p" href="https://apex-three-black.vercel.app/" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a></div><div class="wp" data-i="2"><div><h4>CABINET MOREL</h4><p>Concept web · Conseil</p></div><a class="btn p" href="https://cabinetmorel.vercel.app/" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a></div></div></div><div class="soc rv" id="social-media"><h3>Social media</h3><p class="mute">Posts, stories et bannières.</p><div class="sg"><figure class="fig"><div class="im"><img src="images/post1.jpg" width="1080" height="1080" alt="Post Instagram Maison Dorée : croissant au beurre de Normandie" loading="lazy" decoding="async"></div><figcaption><b>Maison Dorée</b><span>Concept · Post</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/post2.jpg" width="1080" height="1080" alt="Post Instagram Lunaire Studio : Anneau Solstice, nouvelle collection" loading="lazy" decoding="async"></div><figcaption><b>Lunaire Studio</b><span>Concept · Post</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/story1.jpg" width="1080" height="1920" alt="Story Lunaire Studio : Anneau Solstice disponible maintenant" loading="lazy" decoding="async"></div><figcaption><b>Lunaire Studio</b><span>Concept · Story</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/story2.jpg" width="1080" height="1920" alt="Story Maison Dorée : vente flash à -30 %" loading="lazy" decoding="async"></div><figcaption><b>Maison Dorée</b><span>Concept · Story</span></figcaption></figure></div><div class="sb"><figure class="fig"><div class="im"><img src="images/banniere1.jpg" width="1500" height="1080" alt="Bannière CoachMove, coach sportif, fond noir et accents orange" loading="lazy" decoding="async"></div><figcaption><b>CoachMove</b><span>Concept · Bannière</span></figcaption></figure><figure class="fig"><div class="im"><img src="images/banniere2.jpg" width="1500" height="500" alt="Bannière Leon Visuals, photographe portrait et lifestyle, fond noir" loading="lazy" decoding="async"></div><figcaption><b>Leon Visuals</b><span>Concept · Bannière</span></figcaption></figure></div></div></div></section>
 
 <section id="process" style="padding-top:0"><div class="wrap">
 <h2 class="rv">Simple. Rapide. Transparent.</h2>
